@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function InvestorROICalculator() {
   const [amount, setAmount] = useState(100000);
@@ -19,11 +20,17 @@ export default function InvestorROICalculator() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-700 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-700 flex flex-col items-center justify-center px-4">
+      <header className="mb-6 text-center">
+        <Image src="/logo.png" alt="Investor Logo" width={80} height={80} className="mx-auto mb-2 rounded-full" />
+        <h1 className="text-white text-3xl font-bold">A&H Investor Tools</h1>
+        <p className="text-gray-400 text-sm">Maximise your returns with precision</p>
+      </header>
+
       <div className="w-full max-w-md">
         <Card className="rounded-2xl shadow-2xl border border-gray-700 bg-black/70 backdrop-blur-md">
           <CardContent className="p-8 space-y-6 text-white">
-            <h1 className="text-2xl font-bold text-center">📊 Investor ROI Calculator</h1>
+            <h2 className="text-xl font-semibold text-center">📊 Investor ROI Calculator</h2>
 
             <div className="space-y-1">
               <Label className="text-sm text-gray-300">Amount Invested (£)</Label>
